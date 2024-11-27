@@ -157,12 +157,33 @@
                 display: none; /* ซ่อนปุ่มเลื่อนในมือถือ */
             }
         }
+        .experience-card {
+    flex: 0 0 auto;
+    min-width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-height: 400px; /* เพิ่มขีดจำกัดความสูง */
+    overflow: hidden; /* ไม่ให้เนื้อหาที่เกินออกไปแสดง */
+}
 
-        @media screen and (max-width: 480px) {
-            .experience-card {
-                min-width: 160px; /* ลดขนาดการ์ดลงเมื่อหน้าจอเล็ก */
-            }
-        }
+@media screen and (max-width: 768px) {
+    .experience-card {
+        min-width: 200px; /* ลดขนาดการ์ด */
+        padding: 15px;
+        max-height: 350px; /* ลดความสูงในมือถือ */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience-card {
+        min-width: 160px; /* ลดขนาดการ์ดลงเมื่อหน้าจอเล็ก */
+        max-height: 300px; /* ปรับความสูงให้เหมาะสม */
+    }
+}
+
 
     </style>
 </head>
