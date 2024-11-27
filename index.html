@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Experience</title>
+    <title>My Experience Kitipat</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    }
+
+    .experience-section {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 1200px;
+        box-sizing: border-box; /* Prevents extra space causing overflow */
+    }
+
+    .experience-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding: 0 10px; /* Adjust left and right padding to avoid cutting off */
+        box-sizing: border-box;
+    }
 
         /* Navigation bar */
         nav {
@@ -31,22 +50,6 @@
 
         nav a:hover {
             background-color: #575757;
-        }
-
-        /* Experience section */
-        .experience-section {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            max-width: 1200px;
-        }
-
-        .experience-container {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            gap: 20px;
         }
 
         .experience-card {
@@ -136,7 +139,7 @@
             }
 
             .experience-card {
-                min-width: 200px; /* ลดขนาดการ์ดในมือถือ */
+                min-width: auto; /* ลดขนาดการ์ดในมือถือ */
                 padding: 15px;
             }
 
