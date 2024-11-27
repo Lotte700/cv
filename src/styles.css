@@ -1,0 +1,56 @@
+.experience-section {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.experience-container {
+    display: flex;
+    overflow-x: hidden;  /* ไม่ให้แสดง scrollbar */
+    scroll-behavior: smooth;  /* การเลื่อนที่ราบรื่น */
+}
+
+.experience-card {
+    flex: 0 0 auto;  /* ทำให้การ์ดไม่ยืดขยาย */
+    min-width: 300px;  /* ขนาดของแต่ละการ์ด */
+    margin-right: 20px;  /* ช่องว่างระหว่างการ์ด */
+    background-color: #f1f1f1;  /* สีพื้นหลังการ์ด */
+    padding: 20px;  /* ช่องว่างภายในการ์ด */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-button {
+    position: absolute;
+    bottom: 10px;  /* วางปุ่มที่ด้านล่าง */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+/* กำหนดขนาดของ container */
+.image-container {
+    width: 100%;
+    height: 200px; /* หรือกำหนดความสูงตามที่ต้องการ */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* กำหนดขนาดของภาพให้พอดีกับ container */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ใช้ cover เพื่อให้ภาพครอบคลุมพื้นที่ทั้งหมด */
+    object-position: center; /* ใช้ตำแหน่งของภาพที่ตรงกลาง */
+}
