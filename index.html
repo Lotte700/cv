@@ -1,279 +1,114 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Experience Kitipat</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in width/height */
-    }
-
-    .experience-section {
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        max-width: 1200px;
-        box-sizing: border-box; /* Prevents extra space causing overflow */
-    }
-
-    .experience-container {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        gap: 20px;
-        padding: 0 10px; /* Adjust left and right padding to avoid cutting off */
-        box-sizing: border-box;
-    }
-
-        /* Navigation bar */
-        nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 0 15px;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        .experience-card {
-            flex: 0 0 auto;
-            min-width: 300px;
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .experience-card:hover {
-            transform: scale(1.1);
-        }
-
-        .experience-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .experience-card p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* รูปภาพในการ์ด */
-        .experience-card .image-container {
-            width: 100%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            overflow: hidden; /* ป้องกันไม่ให้ภาพล้น */
-        }
-
-        .experience-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* ปรับขนาดภาพให้เต็มกล่อง */
-        }
-
-        /* Scroll buttons */
-        .scroll-button {
-            position: absolute;
-            top: 50%;
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-
-        .scroll-left {
-            left: 10px;
-        }
-
-        .scroll-right {
-            right: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 5px;
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            nav a {
-                font-size: 16px;
-                margin: 0 10px;
-            }
-
-            .experience-card {
-                min-width: auto; /* ลดขนาดการ์ดในมือถือ */
-                padding: 15px;
-            }
-
-            .experience-card h3 {
-                font-size: 16px; /* ปรับขนาดหัวข้อ */
-            }
-
-            .experience-card p {
-                font-size: 12px; /* ปรับขนาดข้อความ */
-            }
-
-            .experience-container {
-                flex-wrap: wrap; /* เปลี่ยนการจัดการการ์ดให้พอดีกับขนาดหน้าจอ */
-                justify-content: center; /* จัดการ์ดให้อยู่ตรงกลาง */
-            }
-
-            .scroll-button {
-                display: none; /* ซ่อนปุ่มเลื่อนในมือถือ */
-            }
-        }
-        .experience-card {
-    flex: 0 0 auto;
-    min-width: 300px;
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    max-height: 400px; /* เพิ่มขีดจำกัดความสูง */
-    overflow: hidden; /* ไม่ให้เนื้อหาที่เกินออกไปแสดง */
-}
-
-@media screen and (max-width: 768px) {
-    .experience-card {
-        min-width: 200px; /* ลดขนาดการ์ด */
-        padding: 15px;
-        max-height: 350px; /* ลดความสูงในมือถือ */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .experience-card {
-        min-width: 160px; /* ลดขนาดการ์ดลงเมื่อหน้าจอเล็ก */
-        max-height: 300px; /* ปรับความสูงให้เหมาะสม */
-    }
-}
-
-
-    </style>
-</head>
-<body>
-
-<!-- Navigation Bar -->
-<nav>
-    <a href="#experience">Experience</a>
-</nav>
-
-<!-- Experience Section -->
-<div class="experience-section" id="experience">
-    <!-- Scroll Buttons -->
-    <button class="scroll-button scroll-left">←</button>
-    <div class="experience-container">
-        <!-- Experience Cards -->
-        <div class="experience-card">
-            <div class="image-container">
-                <img src="image/IMG_4955.JPG" alt="New Gen">
-            </div>
-            <h3>New Gen Energy Research Showcase</h3>
-            <p>Creative Solution</p>
-            <p><b>คำอธิบาย:</b> โครงการนี้เกี่ยวข้องกับการพัฒนาหรือการสร้างนวัตกรรมในการท่องเที่ยว โดยเฉพาะการใช้รถไฟฟ้าเพื่อช่วยส่งเสริมการท่องเที่ยวผ่านแอปพลิเคชัน</p>
-            <p>ได้รับรางวัลชนะเลิศจากการประกวดโครงงานนี้ ซึ่งเน้นการพัฒนาเทคโนโลยีและการออกแบบฟีเจอร์ที่ตอบโจทย์ผู้ใช้งานในแง่ของการเดินทางและการใช้บริการรถไฟฟ้า</p>
-            <p><b>ทักษะที่ได้เรียนรู้:</b> การสัมภาษณ์ผู้ใช้งาน (User Interview) และการออกแบบฟีเจอร์แอปพลิเคชัน ผ่านFigma</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="hero">
+      <img
+        id="toggleTheme"
+        class="theme-btn"
+        src="assets/theme_light.png"
+        alt="theme icon"
+      />
+      <div class="hero-pic">
+        <div class="inner-circle"></div>
+        <img
+          src="assets/lotte.JPG"
+          alt="Mason Wilkes"
+        />
+      </div>
+      <div class="hero-info">
+        <h1>Lotte Kitipat</h1>
+        <h2>Frontend Developer</h2>
+        <div class="logo-container">
+          <a href="https://github.com/Lotte700/"
+            ><img src="assets/github_light.png" alt="github logo"
+          /></a>
+          <a href="https://www.instagram.com/i_ott3/"
+            ><img src="assets/ig_light.png" alt="ig logo"
+          /></a>
+          <a href="mailto:kittipat.bear1402@gmail.com"
+            ><img src="assets/email_light.png" alt="email logo"
+          /></a>
         </div>
-        <div class="experience-card">
-            <div class="image-container">
-                <img src="image/IMG_5358.JPG" alt="NTT DATA">
-            </div>
-            <h3>NTT DATA Innovation Challenge</h3>
-            <p><b>คำอธิบาย:</b> การแข่งขันที่จัดขึ้นเพื่อส่งเสริมการใช้เทคโนโลยีของ Microsoft Power Apps ซึ่งเป็นเครื่องมือสำหรับการพัฒนาระบบการจัดการข้อมูลในองค์กร</p>
-            <p>เข้าร่วมการแข่งขันนี้เพื่อพัฒนาความสามารถในการใช้งาน Power Apps โดยมีเป้าหมายในการสร้างระบบที่สามารถจัดการข้อมูลได้อย่างมีประสิทธิภาพ</p>
-            <p><b>ทักษะที่ได้เรียนรู้:</b> การใช้ Microsoft Power Apps ในการพัฒนาระบบจัดการข้อมูล เช่น AutoMate</p>
-        </div>
-        <div class="experience-card">
-            <div class="image-container">
-                <img src="image/" alt="Web Programming">
-            </div>
-            <h3>Web Programming | Chiang Mai University</h3>
-            <p><b>คำอธิบาย:</b> การพัฒนาเว็บไซต์แนะนำเมนูอาหาร โดยใช้ Laravel Framework ซึ่งเป็นเครื่องมือในการสร้างเว็บแอปพลิเคชันที่มีความยืดหยุ่นและปลอดภัย</p>
-            <p>ในการพัฒนาเว็บไซต์ทั้งในส่วนของ Front-end และ Back-end โดยมีฟังก์ชัน CRUD (Create, Read, Update, Delete) พร้อมการเพิ่มฟีเจอร์ Role-Based Access Control (RBAC) สำหรับการจัดการสิทธิ์ของผู้ใช้</p>
-            <p><b>ทักษะที่ได้เรียนรู้:</b> ได้เรียนรู้มาจากวิชา 954348 Web Programming และอาจารย์ในโปรเจกต์นี้ ซึ่งทำให้คุณได้เรียนรู้การพัฒนาเว็บแอปพลิเคชันโดยใช้ Laravel, การทำงานกับฐานข้อมูล, และการพัฒนาฟีเจอร์ต่าง ๆ เช่น RBAC เพื่อจัดการสิทธิ์ของผู้ใช้</p>
-        </div>
-        <div class="experience-card">
-            <div class="image-container">
-                <img src="image/IMG_6161.jpg" alt="Open House CAMT">
-            </div>
-            <h3>Open House CAMT | Chiang Mai University</h3>
-            <p><b>คำอธิบาย:</b> งานนี้เกี่ยวข้องกับการจัดงาน Open House ซึ่งเป็นกิจกรรมที่เปิดให้ผู้คนเข้าชมกิจกรรมและบริการต่าง ๆ ของมหาวิทยาลัย</p>
-            <p>รับผิดชอบในการจัดการบูธ "Photo Booth" ซึ่งมีบริการถ่ายภาพและพิมพ์รูปขนาด 4x6 นิ้ว โดยผู้เข้าร่วมงานสามารถถ่ายภาพและรับภาพถ่ายทั้งในรูปแบบดิจิทัลและภาพพิมพ์</p>
-            <p><b>ทักษะที่ได้เรียนรู้:</b> การจัดการกิจกรรม, การถ่ายภาพ, การพิมพ์รูปขนาด 4x6, การใช้ Photoshop เพื่อปรับแต่งภาพ และการใช้ Google Drive สำหรับการจัดเก็บและแชร์รูปภาพให้กับผู้เข้าร่วม</p>
-        </div>
-    </div>
-    <button class="scroll-button scroll-right">→</button>
-</div>
-
-<!-- Footer -->
-<!-- Footer (Contact) -->
-<footer>
-    <p><strong>Contact:</strong></p>
-    <p>+99-165-3222</p>
-    <p>kittipat.bear1402@gmail.com</p>
-    <p>1/1176 ม.14 ต.บางวัว อ.บางปะกง จ.ฉะเชิงเทรา 24180</p>
-</footer>
-
-<script>
-    const scrollLeftButton = document.querySelector('.scroll-left');
-    const scrollRightButton = document.querySelector('.scroll-right');
-    const experienceContainer = document.querySelector('.experience-container');
-
-    // เมื่อกดปุ่มเลื่อนซ้าย
-    scrollLeftButton.addEventListener('click', () => {
-        experienceContainer.scrollBy({
-            left: -300,
-            behavior: 'smooth'
-        });
-    });
-
-    // เมื่อกดปุ่มเลื่อนขวา
-    scrollRightButton.addEventListener('click', () => {
-        experienceContainer.scrollBy({
-            left: 300,
-            behavior: 'smooth'
-        });
-    });
-</script>
-
-</body> 
+      </div>
+    </section>
+    <section class="experience">
+      <h2><b>2</b><br />Years<br />Frontend</h2>
+      <h2><b>1</b><br />Years<br />Part Time</h2>
+    </section>
+    <section class="cta">
+      <a href="assets/CV.pdf" download>
+        <button class="btn download-btn">Download CV</button>
+      </a>
+      <a href="mailto:kittipat.bear1402@gmail.com"
+        ><button class="btn contact-btn">Contact Me</button></a
+      >
+    </section>
+    <section class="portfolio-skills">
+      <div class="btn-bg">
+        <button class="btn-2 active-btn" id="portfolio-btn">Portfolio</button>
+        <button class="btn-2" id="skills-btn">Skills</button>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="wrapper project-wrapper">
+        <a href="https://github.com/ChinatipJ/Project"
+          ><img src="assets/project-1.png" alt="Project laravel"
+        /></a>
+      </div>
+      <div class="wrapper project-wrapper">
+        <a href="https://www.figma.com/design/ioBDd8EX0rXDFmqS4JdYeX/U-EVE?t=9T9tzV4Ng9vC4ObR-1"
+          ><img src="assets/project-2.png" alt="new gen energy research showcase"
+        /></a>
+      </div>
+      <div class="wrapper project-wrapper">
+        <a href="https://uf7535vfst.myportfolio.com/"
+          ><img src="assets/project-3.png" alt="BOOTH TAKEs 2 PHOTO"
+        /></a>
+      </div>
+      <div class="wrapper project-wrapper">
+        <a href="https://uf7535vfst4a15.myportfolio.com"
+          ><img src="assets/project-4.png" alt="My Achivment"
+        /></a>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="wrapper">
+        <h3>Frontend</h3>
+        <article class="frontend-skills">
+          <p>HTML</p>
+          <p>CSS</p>
+          
+          <p>JavaScript</p>
+          <p>TypeScript</p>
+          <p>Angular</p>
+        </article>
+      </div>
+      <div class="wrapper">
+        <h3>Backend</h3>
+        <article class="backend-skills">
+          
+          <p>Database CRUD</p>
+          <p>Mysql</p>
+          <p>PHP</p>
+          <p>Web Servers</p>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p>&copy Lotte Kitipat </p>
+    </footer>
+  </body>
 </html>
