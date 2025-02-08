@@ -114,7 +114,7 @@
   .hero-pic img {
     height: 100%;
     object-fit: cover;
-    object-position: top 0.4rem right -1.3rem;
+    object-position: top -1.4rem right -0.1rem;
     transform: scale(1.9);
   }
   
